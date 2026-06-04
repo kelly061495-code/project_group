@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="TRENDY APPAREL MALL — MCP 智慧潮流穿搭電商">
+  <title>TRENDY APPAREL MALL — 極簡街頭服飾</title>
+
+  <!-- UI Frameworks -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Design tokens (Local) -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Archivo:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- ========== 導覽列 HEADER ========== -->
+  <header class="glass fixed top-0 left-0 right-0 z-50">
+    <nav class="max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-12 py-4 flex items-center justify-between">
+      <button onclick="window.app.navigate('home')"
+        class="font-display text-xl sm:text-2xl tracking-tight uppercase italic">TRENDY</button>
+
+      <div class="hidden md:flex items-center space-x-8 font-mono text-[10px] uppercase tracking-wider font-bold">
+        <button onclick="window.app.navigate('shop')" class="hover:text-gray-600 transition">商城商品</button>
+        <button onclick="window.app.openRecommendation()" class="hover:text-gray-600 transition">智慧推薦</button>
+        <button onclick="window.app.navigate('preorder')" class="hover:text-gray-600 transition">預購專區</button>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <button onclick="document.getElementById('search-bar').classList.toggle('hidden')" title="搜尋"
+          class="hover:opacity-60 transition"><i data-lucide="search" class="w-5 h-5"></i></button>
+        <button onclick="window.app.navigate('account')" title="會員中心" class="hover:opacity-60 transition"><i
+            data-lucide="user" class="w-5 h-5"></i></button>
+        <button onclick="window.app.toggleCart()" title="購物車" class="hover:opacity-60 transition relative">
+          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          <span id="cart-count"
+            class="hidden absolute -top-2 -right-2 bg-red-600 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center font-mono">0</span>
+        </button>
+      </div>
+    </nav>
+    <div id="search-bar" class="hidden border-t border-black/10 bg-white">
+      <div class="max-w-[1800px] mx-auto px-4 py-4 flex gap-4">
+        <input type="text" id="search-input" placeholder="搜尋商品名稱、風格或標籤..."
+          class="w-full border-b-2 border-black/20 focus:border-black outline-none pb-2 font-mono text-sm">
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== 主要內容 MAIN CONTENT ========== -->
+  <main id="app-content" class="pt-20"></main>
+
+  <!-- ========== 頁腳 FOOTER ========== -->
+  <footer class="bg-[#0A0A0A] text-white py-32">
+    <div class="max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+        <div>
+          <h3 class="font-display text-2xl mb-6 italic">TRENDY</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">極簡街頭服飾電商平台，精選國際潮流品牌。結合 MCP 智慧技術，為您提供無縫的風格體驗。</p>
+        </div>
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-wider mb-6 font-bold">購物資訊</h4>
+          <ul class="space-y-3 text-sm text-gray-400 font-bold">
+            <li><button onclick="window.app.openInfo('shipping')" class="hover:text-white transition">配送方式</button></li>
+            <li><button onclick="window.app.openInfo('returns')" class="hover:text-white transition">退換貨政策</button></li>
+            <li><button onclick="window.app.openInfo('membership')" class="hover:text-white transition">會員等級與權益</button></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-wider mb-6 font-bold">客戶服務</h4>
+          <ul class="space-y-3 text-sm text-gray-400 font-bold">
+            <li><button onclick="window.app.openInfo('contact')" class="hover:text-white transition">聯絡我們</button></li>
+            <li><button onclick="window.app.openInfo('faq')" class="hover:text-white transition">常見問題 FAQ</button></li>
+            <li><button onclick="window.app.openInfo('preorder')" class="hover:text-white transition">預購專區說明</button></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-wider mb-6 font-bold">訂閱電子報</h4>
+          <div class="flex gap-2">
+            <input type="email" placeholder="電子郵件"
+              class="bg-transparent border-b border-white/20 focus:border-white outline-none pb-2 text-sm flex-1">
+            <button class="hover:opacity-60 transition"><i data-lucide="arrow-right" class="w-5 h-5"></i></button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 font-mono font-bold uppercase">
+        <p>&copy; 2026 TRENDY APPAREL MALL. 版權所有。</p>
+        <p class="mt-4 md:mt-0 tracking-widest">Standalone Modular V3.0</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== 彈窗 MODALS ========== -->
+  <div id="product-modal" class="hidden fixed inset-0 z-[100] overflow-y-auto">
+    <div class="glass-dark absolute inset-0 fade-in" onclick="window.app.closeModal()"></div>
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div class="glass-card rounded-2xl w-full max-w-6xl slide-in-up max-h-[95vh] overflow-y-auto modal-scroll"
+        id="product-modal-content"></div>
+    </div>
+  </div>
+
+  <div id="recommend-modal" class="hidden fixed inset-0 z-[100] overflow-y-auto">
+    <div class="glass-dark absolute inset-0 fade-in"
+      onclick="document.getElementById('recommend-modal').classList.add('hidden')"></div>
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div class="glass-card rounded-3xl w-full max-w-2xl slide-in-up p-10">
+        <div id="recommend-form" class="space-y-8">
+          <h2 class="font-display text-4xl uppercase italic border-b border-black/10 pb-6">MCP 智慧穿搭推薦</h2>
+          <div class="grid grid-cols-2 gap-8">
+            <div class="space-y-2">
+              <label class="text-[10px] font-mono uppercase text-gray-400 font-bold">身長 Height (cm)</label>
+              <input type="number" id="rec-height" min="50" max="250"
+                class="w-full text-4xl font-display border-b-2 border-black/10 outline-none pb-2 focus:border-black"
+                placeholder="175">
+            </div>
+            <div class="space-y-2">
+              <label class="text-[10px] font-mono uppercase text-gray-400 font-bold">體重 Weight (kg)</label>
+              <input type="number" id="rec-weight" min="10" max="300"
+                class="w-full text-4xl font-display border-b-2 border-black/10 outline-none pb-2 focus:border-black"
+                placeholder="65">
+            </div>
+          </div>
+          <button onclick="window.app.processRecommendation()"
+            class="w-full bg-black text-white py-6 font-display text-xl uppercase italic hover:bg-gray-800 transition shadow-2xl">啟動感知運算</button>
+        </div>
+        <div id="recommend-results" class="hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cart-drawer" class="hidden fixed inset-0 z-[110] overflow-hidden">
+    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm shadow-2xl" onclick="window.app.toggleCart()"></div>
+    <div class="absolute top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl slide-in-right flex flex-col">
+      <div class="p-8 border-b flex justify-between items-center">
+        <h2 class="font-display text-2xl uppercase italic">購物車清單</h2><button onclick="window.app.toggleCart()"><i
+            data-lucide="x" class="w-8 h-8"></i></button>
+      </div>
+      <div id="cart-items" class="flex-1 overflow-y-auto p-8 space-y-6"></div>
+      <div id="cart-footer" class="p-8 border-t space-y-4"></div>
+    </div>
+  </div>
+
+  <div id="auth-modal" class="hidden fixed inset-0 z-[120] flex items-center justify-center p-4">
+    <div class="glass-dark absolute inset-0" onclick="document.getElementById('auth-modal').classList.add('hidden')">
+    </div>
+    <div class="relative glass-card w-full max-w-md rounded-3xl p-10 slide-in-up">
+      <div id="auth-login" class="space-y-6">
+        <h2 class="font-display text-3xl uppercase italic">會員登入 LOGIN</h2>
+        <div class="space-y-4">
+          <input id="login-email" type="email" placeholder="電子郵件"
+            class="w-full border-b-2 border-black/10 focus:border-black outline-none pb-2">
+          <input id="login-pass" type="password" placeholder="密碼"
+            class="w-full border-b-2 border-black/10 focus:border-black outline-none pb-2">
+        </div>
+        <button onclick="window.app.login()"
+          class="w-full bg-black text-white py-4 font-display uppercase italic">登入系統</button>
+        <p class="text-center text-xs font-mono">還不是會員？ <button onclick="window.app.toggleAuthMode('reg')"
+            class="underline hover:opacity-60">立即註冊</button></p>
+      </div>
+      <div id="auth-reg" class="hidden space-y-6">
+        <h2 class="font-display text-3xl uppercase italic">加入會員 SIGNUP</h2>
+        <div class="space-y-4">
+          <input id="reg-name" type="text" placeholder="真實姓名"
+            class="w-full border-b-2 border-black/10 focus:border-black outline-none pb-2">
+          <input id="reg-email" type="email" placeholder="電子郵件"
+            class="w-full border-b-2 border-black/10 focus:border-black outline-none pb-2">
+          <input id="reg-pass" type="password" placeholder="設定密碼"
+            class="w-full border-b-2 border-black/10 focus:border-black outline-none pb-2">
+        </div>
+        <button onclick="window.app.register()"
+          class="w-full bg-black text-white py-4 font-display uppercase italic">完成註冊</button>
+        <p class="text-center text-xs font-mono">已有帳號？ <button onclick="window.app.toggleAuthMode('login')"
+            class="underline hover:opacity-60">返回登入</button></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Entry Logic -->
+  <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

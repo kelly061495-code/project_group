@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TRENDY APPAREL MALL — 操作手冊</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+      line-height: 1.65;
+      color: #1f2937;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 40px;
+      background: #fff;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 48px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid #0A0A0A;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 24px 0 8px;
+      color: #111827;
+    }
+
+    h4 {
+      font-size: 15px;
+      margin: 14px 0 6px;
+      color: #374151;
+    }
+
+    p,
+    li {
+      font-size: 14px;
+    }
+
+    code,
+    pre {
+      font-family: "SF Mono", Menlo, Consolas, monospace;
+      font-size: 13px;
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    pre {
+      padding: 12px 16px;
+      overflow-x: auto;
+      line-height: 1.45;
+      border-left: 3px solid #0A0A0A;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13px;
+    }
+
+    th,
+    td {
+      border: 1px solid #d1d5db;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f9fafb;
+      font-weight: 600;
+    }
+
+    .cover {
+      text-align: center;
+      padding: 80px 20px 60px;
+      border-bottom: 4px double #0A0A0A;
+      margin-bottom: 40px;
+    }
+
+    .cover h1 {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .cover p {
+      font-size: 16px;
+      color: #6b7280;
+    }
+
+    .meta-table {
+      max-width: 480px;
+      margin: 24px auto;
+    }
+
+    .screenshot {
+      margin: 16px 0 8px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    .screenshot img {
+      width: 100%;
+      display: block;
+    }
+
+    .caption {
+      font-size: 12px;
+      color: #6b7280;
+      text-align: center;
+      margin: 4px 0 24px;
+      font-style: italic;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #0A0A0A;
+      color: #fff;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+
+    .badge-orange {
+      background: #D97706;
+    }
+
+    .badge-red {
+      background: #DC2626;
+    }
+
+    .badge-green {
+      background: #059669;
+    }
+
+    .toc {
+      background: #f9fafb;
+      padding: 16px 24px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin: 4px 0;
+    }
+
+    .toc a {
+      color: #0A0A0A;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    .note {
+      background: #fef3c7;
+      border-left: 4px solid #D97706;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 13px;
+    }
+
+    .pagebreak {
+      page-break-after: always;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+      }
+
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== 封面 ========== -->
+  <section class="cover">
+    <p style="font-size: 13px; letter-spacing: 0.3em; color: #6b7280; margin-bottom: 8px;">OPERATION MANUAL</p>
+    <h1>TRENDY APPAREL MALL</h1>
+    <p>潮流服飾商城 · 操作手冊</p>
+    <table class="meta-table">
+      <tr>
+        <th>專題主題</th>
+        <td>潮流服飾商城 (Apparel Fashion Store)</td>
+      </tr>
+      <tr>
+        <th>組別人數</th>
+        <td>2 人</td>
+      </tr>
+      <tr>
+        <th>成員</th>
+        <td>A113222017 洪駿宥 / A113222003 邱渝璇</td>
+      </tr>
+      <tr>
+        <th>版本</th>
+        <td>v1.0 · 2026-02</td>
+      </tr>
+      <tr>
+        <th>GitHub</th>
+        <td style="font-size:11px;">github.com/kelly061495-code/Final-Report-_Trendy-Apparel-Mall</td>
+      </tr>
+    </table>
+    <p style="margin-top: 32px; color: #9ca3af;" class="no-print">提示:用瀏覽器 Ctrl+P → 另存為 PDF 即可匯出 PDF 檔。</p>
+  </section>
+
+  <!-- ========== 目錄 ========== -->
+  <div class="toc">
+    <h3 style="margin-top: 0;">目錄</h3>
+    <ol>
+      <li><a href="#install">1. 安裝與啟動</a></li>
+      <li><a href="#features">2. 功能畫面導覽</a>
+        <ol style="padding-left: 16px; font-size: 13px;">
+          <li><a href="#f1">2.1 首頁 Hero 區</a></li>
+          <li><a href="#f2">2.2 熱門商品排行</a></li>
+          <li><a href="#f3">2.3 預購商品專區</a></li>
+          <li><a href="#f4">2.4 全部商品 (產品模組)</a></li>
+          <li><a href="#f5">2.5 配飾分類頁</a></li>
+          <li><a href="#f6">2.6 商品詳細頁</a></li>
+          <li><a href="#f7">2.7 預購專頁</a></li>
+          <li><a href="#f8">2.8 個人化推薦 — 表單</a></li>
+          <li><a href="#f9">2.9 個人化推薦 — MCP 結果</a></li>
+          <li><a href="#f10">2.10 購物車 (採購模組)</a></li>
+          <li><a href="#f11">2.11 註冊 / 登入</a></li>
+          <li><a href="#f12">2.12 結帳頁</a></li>
+          <li><a href="#f13">2.13 優惠碼套用</a></li>
+          <li><a href="#f14">2.14 訂單完成 (現貨/預購拆分)</a></li>
+          <li><a href="#f15">2.15 歷史訂單 + CSV 匯出</a></li>
+          <li><a href="#f16">2.16 Footer 資訊頁</a></li>
+          <li><a href="#f17">2.17 Footer 整體版面</a></li>
+        </ol>
+      </li>
+      <li><a href="#mcp">3. MCP 設定與運作</a></li>
+      <li><a href="#agent">4. Agent 架構文件</a></li>
+      <li><a href="#troubleshoot">5. 常見問題排除</a></li>
+    </ol>
+  </div>
+
+  <div class="pagebreak"></div>
+
+  <!-- ========== 1. 安裝 ========== -->
+  <h2 id="install">1. 安裝與啟動</h2>
+
+  <h3>環境需求</h3>
+  <ul>
+    <li>Python 3.10+</li>
+    <li>Node.js 18+ / yarn</li>
+    <li>(可選) MongoDB — 僅 status_checks API 使用</li>
+  </ul>
+
+  <h3>啟動步驟</h3>
+  <pre># 1. 後端套件
+cd backend
+pip install -r requirements.txt
+
+# 2. 前端套件
+cd ../frontend
+yarn install
+
+# 3. 環境變數 (複製 .env.example 並編輯)
+cp ../.env.example backend/.env
+cp ../.env.example frontend/.env
+
+# 4. 啟動服務 (Supervisor 自動 hot-reload)
+sudo supervisorctl start backend frontend
+
+# 5. 瀏覽器開啟
+# 前端: http://localhost:3000
+# 後端 API: http://localhost:8001/api</pre>
+
+  <h3>環境變數</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>檔案</th>
+        <th>變數</th>
+        <th>說明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>backend/.env</td>
+        <td>MONGO_URL</td>
+        <td>MongoDB 連線字串 (預設 mongodb://localhost:27017)</td>
+      </tr>
+      <tr>
+        <td>backend/.env</td>
+        <td>DB_NAME</td>
+        <td>資料庫名稱 (預設 trendy_apparel)</td>
+      </tr>
+      <tr>
+        <td>backend/.env</td>
+        <td>CORS_ORIGINS</td>
+        <td>允許的跨域來源 (預設 *)</td>
+      </tr>
+      <tr>
+        <td>frontend/.env</td>
+        <td>REACT_APP_BACKEND_URL</td>
+        <td>後端 URL,用於呼叫 MCP API</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagebreak"></div>
+
+  <!-- ========== 2. 功能畫面 ========== -->
+  <h2 id="features">2. 功能畫面導覽</h2>
+
+  <h3 id="f1">2.1 首頁 Hero 區</h3>
+  <p>進入網站首頁顯示品牌 Logo「TRENDY APPAREL」與兩個主要 CTA:<strong>立即選購</strong>(導向全部商品) 與 <strong>個人化推薦</strong>(開啟 MCP 推薦表單)。</p>
+  <div class="screenshot"><img src="screenshots/01_home_hero.png" alt="Home Hero"></div>
+  <p class="caption">畫面 2.1 — 首頁 Hero 區</p>
+
+  <h3 id="f2">2.2 熱門商品排行 <span class="badge badge-red">加分項目</span></h3>
+  <p>依本機 LocalStorage 內歷史銷售統計自動排序的「Bestsellers」區塊,顯示 Top 4 並附上 #1–#4 排行徽章與已售件數。下單後排行會即時更新。</p>
+  <div class="screenshot"><img src="screenshots/02_hot_products.png" alt="Hot Products"></div>
+  <p class="caption">畫面 2.2 — 熱門商品排行 (依銷量自動排序)</p>
+
+  <h3 id="f3">2.3 預購商品專區 <span class="badge badge-orange">加分項目</span></h3>
+  <p>首頁顯示「預購商品」區塊,商品卡左上角橘色 <code>預購 YYYY-MM-DD</code> 標籤標示預計到貨日。</p>
+  <div class="screenshot"><img src="screenshots/03_preorder_section.png" alt="Preorder Section"></div>
+  <p class="caption">畫面 2.3 — 預購商品區 (含橘色預購標籤)</p>
+
+  <h3 id="f4">2.4 全部商品 (產品模組)</h3>
+  <p>共 24 件商品分為 6 大類:上衣、褲子、連帽衫、外套、包包、配飾。點擊上方分類按鈕可切換顯示。</p>
+  <div class="screenshot"><img src="screenshots/04_shop_all.png" alt="Shop All"></div>
+  <p class="caption">畫面 2.4 — 全部商品列表 (含分類篩選)</p>
+
+  <h3 id="f5">2.5 配飾分類頁</h3>
+  <p>配飾分類含 4 件商品:NEO TOKYO 機能平簷帽、VOID 銀色項鏈、VINTAGE 復古卡車帽、STEALTH 針織毛帽。<strong>圖片已驗證可正常載入</strong>。</p>
+  <div class="screenshot"><img src="screenshots/05_shop_jewelry.png" alt="Jewelry"></div>
+  <p class="caption">畫面 2.5 — 配飾分類頁 (4 件配飾)</p>
+
+  <h3 id="f6">2.6 商品詳細頁</h3>
+  <p>點擊商品卡的「查看詳情」開啟商品詳細 Modal。內含多張角度圖、尺寸選擇、數量調整 (防呆 1–99 整數)、尺寸表、模特試穿資訊。</p>
+  <div class="screenshot"><img src="screenshots/06_product_modal_cap.png" alt="Product Modal"></div>
+  <p class="caption">畫面 2.6 — 商品詳細 Modal (NEO TOKYO 機能平簷帽)</p>
+
+  <h3 id="f7">2.7 預購專頁</h3>
+  <p>頂部導覽列「預購」按鈕進入專頁,集中顯示所有預購商品 + 預購須知。</p>
+  <div class="screenshot"><img src="screenshots/07_preorder_page.png" alt="Preorder Page"></div>
+  <p class="caption">畫面 2.7 — 預購專頁</p>
+
+  <div class="pagebreak"></div>
+
+  <h3 id="f8">2.8 個人化推薦 — 表單 <span class="badge badge-green">MCP-Powered</span></h3>
+  <p>填寫身高、體重、預算與風格偏好。所有輸入皆有防呆驗證 (身高 100–250、體重 20–300、預算 0–999999)。</p>
+  <div class="screenshot"><img src="screenshots/08_recommend_form.png" alt="Recommend Form"></div>
+  <p class="caption">畫面 2.8 — 個人化推薦表單 (含風格多選標籤)</p>
+
+  <h3 id="f9">2.9 個人化推薦 — MCP 結果</h3>
+  <p>提交後系統呼叫後端 MCP server (Python stdio JSON-RPC),回傳 BMI、建議尺寸、6 件推薦商品。右上角綠色 <span class="badge badge-green">MCP
+      Live</span> 表示成功使用 MCP server (失敗會自動 fallback 為 Local Mode)。</p>
+  <div class="screenshot"><img src="screenshots/09_recommend_results.png" alt="Recommend Results"></div>
+  <p class="caption">畫面 2.9 — MCP 推薦結果 (BMI + 建議尺寸 + 6 件推薦)</p>
+
+  <h3 id="f10">2.10 購物車 (採購模組)</h3>
+  <p>支援多品項多數量採購。預購商品顯示橘色預購標籤。數量編輯有 1–99 防呆驗證,可一鍵移除單品項。</p>
+  <div class="screenshot"><img src="screenshots/10_cart_drawer.png" alt="Cart"></div>
+  <p class="caption">畫面 2.10 — 購物車 (含現貨 + 預購商品)</p>
+
+  <h3 id="f11">2.11 註冊 / 登入 <span class="badge badge-red">加分項目</span></h3>
+  <p>右上角人形圖示開啟 Auth Modal。註冊欄位:姓名、Email (格式驗證)、密碼 (≥6 字元)。Email 不可重複。註冊成功提示「新會員可使用 WELCOME10 優惠碼」。</p>
+  <div class="screenshot"><img src="screenshots/11_auth_register.png" alt="Register"></div>
+  <p class="caption">畫面 2.11 — 註冊表單</p>
+
+  <h3 id="f12">2.12 結帳頁</h3>
+  <p>結帳表單包含:配送資訊、付款方式、優惠碼、訂單摘要 (現貨/預購自動分區)。所有欄位有防呆 (電話 09 開頭 10 碼、郵遞區號 3 或 5 碼、日期 YYYY-MM-DD)。</p>
+  <div class="screenshot"><img src="screenshots/12_checkout.png" alt="Checkout"></div>
+  <p class="caption">畫面 2.12 — 結帳頁 (含現貨/預購分區)</p>
+
+  <h3 id="f13">2.13 優惠碼套用 <span class="badge badge-red">加分項目</span></h3>
+  <p>輸入優惠碼 <code>WELCOME10</code> 點擊「套用」,系統檢查門檻與互斥規則。可用優惠碼:WELCOME10 (新會員 9 折)、SAVE300 (滿 3000 折 300)、VIP500 (滿 5000 折
+    500)、FREESHIP (免運)。</p>
+  <div class="screenshot"><img src="screenshots/13_checkout_discount.png" alt="Discount"></div>
+  <p class="caption">畫面 2.13 — 優惠碼套用後總計自動更新</p>
+
+  <h3 id="f14">2.14 訂單完成 (現貨/預購自動拆分)</h3>
+  <p>訂單建立後顯示確認頁。<strong>現貨</strong>區塊 (1–2 個工作天出貨) 與 <strong>預購</strong>區塊 (依商品 available_date 出貨) 自動分區顯示。</p>
+  <div class="screenshot"><img src="screenshots/14_order_confirmed.png" alt="Order Confirmed"></div>
+  <p class="caption">畫面 2.14 — 訂單完成頁 (含優惠折抵 + 預購分類)</p>
+
+  <h3 id="f15">2.15 歷史訂單 + CSV 匯出 <span class="badge badge-red">加分項目</span></h3>
+  <p>我的帳戶 → 訂單記錄,可搜尋訂單編號、依狀態篩選。右上角「匯出 CSV」按鈕一鍵下載 UTF-8 BOM 格式 CSV (可直接以 Excel 開啟)。</p>
+  <div class="screenshot"><img src="screenshots/15_order_history.png" alt="Order History"></div>
+  <p class="caption">畫面 2.15 — 歷史訂單查詢 + 匯出 CSV</p>
+
+  <h3 id="f16">2.16 Footer 資訊頁</h3>
+  <p>Footer 六個連結均可開啟 Modal:配送方式 / 退換貨政策 / 尺寸指南 / 聯絡我們 / FAQ / 訂單追蹤。每個 Modal 內含完整中文資訊內容。</p>
+  <div class="screenshot"><img src="screenshots/16_footer_faq.png" alt="Footer FAQ"></div>
+  <p class="caption">畫面 2.16 — FAQ Modal 範例</p>
+
+  <h3 id="f17">2.17 Footer 整體版面</h3>
+  <div class="screenshot"><img src="screenshots/17_footer.png" alt="Footer"></div>
+  <p class="caption">畫面 2.17 — Footer (三欄式排版:品牌 / 購物資訊 / 客戶服務)</p>
+
+  <div class="pagebreak"></div>
+
+  <!-- ========== 3. MCP 設定 ========== -->
+  <h2 id="mcp">3. MCP 設定與運作</h2>
+
+  <h3>3.1 MCP 架構</h3>
+  <p>本專題實作 <strong>兩個 MCP server</strong>,皆以 Python stdio JSON-RPC 通訊,符合 MCP 規格:</p>
+  <ol>
+    <li><code>trendy-bmi-recommend</code> — 依身高體重 BMI 推薦最多 6 件商品</li>
+    <li><code>trendy-product-info</code> — 查詢商品型錄、價格、庫存、預購狀態</li>
+  </ol>
+
+  <h3>3.2 mcp_config.json 完整內容</h3>
+  <p>位於專案根目錄 <code>/mcp_config.json</code>,可在支援 MCP 的客戶端 (如 Claude Desktop、Continue、Cline) 中載入此設定來啟用兩個 server:</p>
+
+  <pre>{
+  "mcpServers": {
+    "trendy-bmi-recommend": {
+      "command": "python3",
+      "args": ["/app/mcp_servers/bmi_recommend.py"],
+      "description": "依使用者身高、體重、預算與風格偏好,推薦最多 6 件適合的潮流服飾",
+      "tools": [{
+        "name": "bmi_recommend",
+        "description": "Recommend up to 6 fashion items based on BMI, budget, and style preference",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "height": { "type": "number", "description": "Height in cm (100-250)" },
+            "weight": { "type": "number", "description": "Weight in kg (20-300)" },
+            "budget": { "type": "number" },
+            "styles": { "type": "array", "items": { "type": "string" } }
+          },
+          "required": ["height", "weight"]
+        }
+      }]
+    },
+    "trendy-product-info": {
+      "command": "python3",
+      "args": ["/app/mcp_servers/product_info.py"],
+      "description": "查詢商品型錄、價格、庫存、預購狀態",
+      "tools": [
+        { "name": "get_product",   "description": "Get a product by id" },
+        { "name": "list_products", "description": "List products by category" }
+      ]
+    }
+  }
+}</pre>
+
+  <h3>3.3 MCP 啟用步驟 (Claude Desktop 範例)</h3>
+  <ol>
+    <li>開啟 Claude Desktop 設定檔 <code>~/Library/Application Support/Claude/claude_desktop_config.json</code> (macOS)
+      或 <code>%APPDATA%\Claude\claude_desktop_config.json</code> (Windows)</li>
+    <li>將本專案的 <code>mcp_config.json</code> 內 <code>mcpServers</code> 區塊複製貼入</li>
+    <li>重啟 Claude Desktop,即可在對話中使用工具<code>bmi_recommend</code>、<code>get_product</code>、<code>list_products</code></li>
+  </ol>
+
+  <h3>3.4 後端 HTTP Bridge (供前端呼叫)</h3>
+  <p>FastAPI 在 <code>backend/server.py</code> 將 stdio MCP 包裝成 HTTP API,供前端 fetch 呼叫:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>對應 MCP Tool</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>/api/mcp/bmi-recommend</code></td>
+        <td>POST</td>
+        <td>bmi_recommend</td>
+      </tr>
+      <tr>
+        <td><code>/api/mcp/product/{product_id}</code></td>
+        <td>GET</td>
+        <td>get_product</td>
+      </tr>
+      <tr>
+        <td><code>/api/mcp/products?category=X</code></td>
+        <td>GET</td>
+        <td>list_products</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>3.5 測試指令</h3>
+  <pre># 1. 測試 BMI 推薦
+curl -X POST http://localhost:8001/api/mcp/bmi-recommend \
+  -H "Content-Type: application/json" \
+  -d '{"height":170,"weight":65,"budget":5000,"styles":["Techwear","Street"]}'
+
+# 預期回應:
+# {"bmi":22.5,"category":"正常","sizes":{"top":"M","pant":"32"},
+#  "items":["prod_024","prod_001","prod_015","prod_017","prod_020","prod_010"],
+#  "note":"...","source":"mcp"}
+
+# 2. 測試商品查詢
+curl http://localhost:8001/api/mcp/product/prod_003
+curl http://localhost:8001/api/mcp/products?category=jewelry</pre>
+
+  <h3>3.6 失敗時的 Fallback</h3>
+  <p>若 MCP server 啟動失敗或網路中斷,前端 <code>app/js/recommend.js</code> 內 <code>localRecommend()</code> 會接手執行,
+    邏輯與 MCP server 完全一致,使用者體驗不受影響。回應右上角會顯示灰色 <span class="badge" style="background:#6b7280;">Local Mode</span> 標籤。</p>
+
+  <div class="pagebreak"></div>
+
+  <!-- ========== 4. Agent 架構 ========== -->
+  <h2 id="agent">4. Agent 架構文件</h2>
+
+  <p>本專題依照「Skills / Workflows / Rules / Knowledge」分離原則建立 <code>.agent/</code> 目錄,
+    每份文件對應一個程式模組。Agent 框架可載入這些 <code>.md</code> 文件作為提示上下文。</p>
+
+  <h3>4.1 .agent/ 目錄結構</h3>
+  <pre>.agent/
+├── persona.md                  AI 角色人設
+├── knowledge/                  靜態知識庫
+│   ├── products.md             24 件商品對照表
+│   ├── sizing.md               尺寸數據對照表
+│   ├── style-tags.md           風格標籤與 MCP 關聯
+│   └── info-pages.md           Footer 資訊頁知識
+├── rules/                      業務規則 (SSOT)
+│   ├── discount-rules.md       優惠碼與防負數規則
+│   ├── preorder.md             預購拆單與配送優先權
+│   ├── form-validation.md      表單防呆驗證規範
+│   └── membership-rules.md     會員等級計算規範
+├── skills/                     程序模組
+│   ├── order-calculator.md     金額運算邏輯
+│   ├── mcp-engine.md           BMI 推薦 (MCP 規格)
+│   └── auth-state.md           會員資料庫防護
+└── workflows/                  流程 SOP
+    ├── checkout-flow.md        結帳完整 SOP
+    ├── auth-flow.md            註冊登入流程
+    └── mcp-flow.md             個人化推薦流程</pre>
+
+  <div class="note">
+    <strong>程式與文件對應關係</strong>: 每個 <code>.md</code> 內均明確標註「對應程式」，老師可逐項對照 <code>js/*.js</code> 驗證。
+  </div>
+
+  <h3>4.2 對應關係速查表</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>程式模組</th>
+        <th>對應 Agent 文件</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>js/order.js</td>
+        <td>rules/discount-rules.md + rules/form-validation.md</td>
+      </tr>
+      <tr>
+        <td>js/app.js</td>
+        <td>rules/membership-rules.md + workflows/auth-flow.md</td>
+      </tr>
+      <tr>
+        <td>js/mcp-server.js</td>
+        <td>skills/mcp-engine.md + workflows/mcp-flow.md</td>
+      </tr>
+      <tr>
+        <td>js/product.js</td>
+        <td>knowledge/products.md + knowledge/sizing.md</td>
+      </tr>
+      <tr>
+        <td>js/data.js</td>
+        <td>knowledge/style-tags.md + knowledge/categories.md</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagebreak"></div>
+
+  <!-- ========== 5. 常見問題 ========== -->
+  <h2 id="troubleshoot">5. 常見問題排除</h2>
+
+  <h3>Q1:推薦結果顯示「Local Mode」而非「MCP Live」?</h3>
+  <p>這代表前端無法連到 MCP HTTP bridge。請檢查:</p>
+  <ul>
+    <li>backend 服務是否啟動 (<code>supervisorctl status backend</code>)</li>
+    <li>frontend/.env 內 <code>REACT_APP_BACKEND_URL</code> 是否正確</li>
+    <li>瀏覽器 DevTools → Network 是否有 <code>/api/mcp/bmi-recommend</code> 失敗請求</li>
+  </ul>
+
+  <h3>Q2:商品圖片顯示破圖?</h3>
+  <p>所有 <code>&lt;img&gt;</code> 已加 <code>onerror</code> fallback,單張圖片 404 不影響整體。
+    若大面積破圖,請檢查 Tailwind CDN 是否能正常載入。</p>
+
+  <h3>Q3:結帳時提示「資料驗證失敗」?</h3>
+  <p>請確認:電話為 09 開頭 10 碼 / 郵遞區號 3 或 5 碼數字 / Email 格式正確。詳見 <code>.agent/rules/validation.md</code>。</p>
+
+  <h3>Q4:優惠碼套用失敗?</h3>
+  <p>可能原因:</p>
+  <ul>
+    <li>未達最低消費 (SAVE300 需滿 3000,VIP500 需滿 5000)</li>
+    <li>WELCOME10 已被當前帳號使用過 (一人限用一次)</li>
+    <li>VIP500 與 SAVE300 互斥,不可併用</li>
+  </ul>
+
+  <h3>Q5:如何重置所有資料?</h3>
+  <p>打開瀏覽器 DevTools Console,輸入:</p>
+  <pre>localStorage.removeItem('trendy_apparel_state');
+localStorage.removeItem('trendy_users');
+location.reload();</pre>
+
+  <hr style="margin: 48px 0; border: none; border-top: 2px dashed #d1d5db;">
+  <p style="text-align: center; color: #9ca3af; font-size: 12px;">
+    TRENDY APPAREL MALL · 2026 · 期末專題操作手冊<br>
+    本手冊涵蓋全部 17 個功能畫面 + MCP 設定 + Agent 文件對照<br>
+    匯出 PDF:Ctrl+P / Cmd+P → 另存為 PDF
+  </p>
+
+</body>
+
+</html>

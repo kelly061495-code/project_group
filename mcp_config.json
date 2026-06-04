@@ -1,0 +1,60 @@
+{
+    "mcpServers": {
+        "trendy-bmi-recommend": {
+            "command": "python",
+            "args": [
+                "backend/mcp_servers/bmi_recommend.py"
+            ],
+            "description": "依使用者身高、體重、預算與風格偏好,推薦最多 6 件適合的潮流服飾",
+            "tools": [
+                {
+                    "name": "bmi_recommend",
+                    "description": "Recommend up to 6 fashion items based on BMI, budget, and style preference",
+                    "inputSchema": {
+                        "type": "object",
+                        "properties": {
+                            "height": {
+                                "type": "number",
+                                "description": "Height in cm (100-250)"
+                            },
+                            "weight": {
+                                "type": "number",
+                                "description": "Weight in kg (20-300)"
+                            },
+                            "budget": {
+                                "type": "number"
+                            },
+                            "styles": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": [
+                            "height",
+                            "weight"
+                        ]
+                    }
+                }
+            ]
+        },
+        "trendy-product-info": {
+            "command": "python",
+            "args": [
+                "backend/mcp_servers/product_info.py"
+            ],
+            "description": "查詢商品型錄、價格、庫存、預購狀態",
+            "tools": [
+                {
+                    "name": "get_product",
+                    "description": "Get a product by id"
+                },
+                {
+                    "name": "list_products",
+                    "description": "List products by category"
+                }
+            ]
+        }
+    }
+}
